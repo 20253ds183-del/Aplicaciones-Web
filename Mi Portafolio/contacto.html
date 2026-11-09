@@ -1,0 +1,63 @@
+contacto.html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información de contacto para proyectos web.">
+    <title>Contacto | Mi portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a href="index.html" class="logo">VMOS<span>.dev</span></a>
+
+            <nav aria-label="Navegación principal">
+                <a href="index.html">Home</a>
+                <a href="sobre-mi.html">Sobre mi</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="portafolio.html">Portafolio</a>
+                <a href="contacto.html" aria-current="page">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor contenido">
+        <h1 class="titulo-pagina">Contacto</h1>
+
+        <div class="contacto-columnas">
+            <section class="datos-contacto">
+                <h2>Datos de contacto</h2>
+                <p><strong>Correo:</strong> <a href="mailto:20253ds183@utez.edu.mx">20253ds183@utez.edu.mx</a></p>
+                <p><strong>Ubicación:</strong> Jiutepec, Morelos</p>
+                <p><strong>Teléfono:</strong> +52 777 353 3160</p>
+            </section>
+
+            <section class="formulario">
+                <h2>Envíame un mensaje</h2>
+                <form action="mailto:20253ds183@utez.edu.mx" method="post" enctype="text/plain">
+                   <label for="nombre">Nombre</label>
+                   <input type="text" id="nombre" name="nombre" required>
+
+                   <label for="correo">Correo electrónico</label>
+                   <input type="email" id="correo" name="correo" required>
+
+                   <label for="mensaje">Comentarios</label>
+                   <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+                   <button class="boton" type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="redes">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        </div>
+    </footer>
+</body>
+</html>
