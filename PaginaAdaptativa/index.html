@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport: indispensable para que la página se adapte al celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web adaptativa de Cristian Bernal: inicio, sobre mí, servicios, proyectos y contacto.">
+    <title>Cristian Bernal | Página web adaptativa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y navegación -->
+    <header class="encabezado">
+        <p class="logo">Cristian Bernal</p>
+
+        <!-- Menú hamburguesa para celular (sin JavaScript) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar el menú">
+        <label for="menu-toggle" class="menu-boton" aria-hidden="true">&#9776;</label>
+
+        <nav class="navegacion" aria-label="Menú principal">
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Página Home: único título principal de toda la página -->
+        <section id="inicio" class="seccion inicio">
+            <h1>Cristian Bernal</h1>
+
+            <figure class="imagen-principal">
+                <img src="https://picsum.photos/seed/cristian-portada/800/500" alt="Fotografía de presentación de Cristian Bernal" loading="lazy">
+                <figcaption>Bienvenido a mi página web adaptativa</figcaption>
+            </figure>
+
+            <p class="intro">Hola, soy Cristian Bernal, estudiante de Desarrollo de Aplicaciones Móviles. En esta página presento quién soy, los servicios que ofrezco y mis proyectos, con un diseño que se adapta a tu celular en vertical y en horizontal.</p>
+
+            <a class="boton" href="#sobre-mi">Seguir</a>
+        </section>
+
+        <!-- 2. Sobre mí -->
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre mí</h2>
+
+            <figure>
+                <img src="https://picsum.photos/seed/sobre-mi-cristian/800/500" alt="Imagen representativa de Cristian Bernal" loading="lazy">
+            </figure>
+
+            <p>Estudio Desarrollo de Aplicaciones Móviles y me interesa crear aplicaciones y páginas web que se vean bien y funcionen bien en cualquier dispositivo, en especial en el celular, que es donde la mayoría de las personas navega hoy.</p>
+            <p>En mis prácticas trabajo con HTML5 semántico, CSS con consultas de medios y JavaScript básico. Mi objetivo es que cada proyecto sea claro, rápido de cargar y fácil de usar, sin importar el tamaño de la pantalla.</p>
+        </section>
+
+        <!-- 3. Servicios -->
+        <section id="servicios" class="seccion">
+            <h2>Servicios</h2>
+
+            <article class="servicio">
+                <h3>Diseño web</h3>
+                <figure>
+                    <img src="https://picsum.photos/seed/diseno-web/800/500" alt="Ejemplo de diseño web adaptable" loading="lazy">
+                </figure>
+                <p>Diseño páginas web adaptativas, con estructura semántica, menús pensados para celular y estilos que se ajustan en vertical y en horizontal.</p>
+            </article>
+
+            <article class="servicio">
+                <h3>Base de datos</h3>
+                <figure>
+                    <img src="https://picsum.photos/seed/base-de-datos/800/500" alt="Ejemplo de trabajo con bases de datos" loading="lazy">
+                </figure>
+                <p>Organizo la información de un proyecto en bases de datos, para que los datos se guarden, se consulten y se muestren de forma ordenada y sin errores.</p>
+            </article>
+        </section>
+
+        <!-- 4. Proyectos: carrusel -->
+        <section id="proyectos" class="seccion">
+            <h2>Proyectos</h2>
+            <p>Desliza o usa las flechas para ver mis proyectos.</p>
+
+            <div class="carrusel" id="carrusel">
+                <article class="proyecto">
+                    <h3>Proyecto 1: Página Home</h3>
+                    <figure>
+                        <img src="https://picsum.photos/seed/proyecto-home/800/500" alt="Captura del proyecto Página Home" loading="lazy">
+                    </figure>
+                    <p>Primera versión de esta página, con inicio, presentación y menú de navegación.</p>
+                </article>
+
+                <article class="proyecto">
+                    <h3>Proyecto 2: NewsFlash</h3>
+                    <figure>
+                        <img src="https://picsum.photos/seed/proyecto-newsflash/800/500" alt="Captura del proyecto NewsFlash" loading="lazy">
+                    </figure>
+                    <p>App de noticias con tareas en segundo plano, notificaciones y Firebase.</p>
+                </article>
+
+                <article class="proyecto">
+                    <h3>Proyecto 3: Ordenamientos en Java</h3>
+                    <figure>
+                        <img src="https://picsum.photos/seed/proyecto-java/800/500" alt="Captura del proyecto de ordenamientos en Java" loading="lazy">
+                    </figure>
+                    <p>Burbuja, selección e inserción con el mismo arreglo, en Java.</p>
+                </article>
+            </div>
+
+            <div class="controles-carrusel">
+                <button type="button" id="anterior" aria-label="Ver el proyecto anterior">&#10094; Anterior</button>
+                <button type="button" id="siguiente" aria-label="Ver el proyecto siguiente">Siguiente &#10095;</button>
+            </div>
+        </section>
+
+        <!-- 5. Contacto -->
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <p>¿Tienes un proyecto en mente? Escríbeme y te respondo lo antes posible.</p>
+
+            <form action="#" method="post" class="formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntame de tu proyecto..." required></textarea>
+
+                <button type="submit" class="boton">Enviar</button>
+            </form>
+
+            <h3>Video de presentación</h3>
+            <video controls preload="none" poster="https://picsum.photos/seed/video-cristian/800/450">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+    </main>
+
+    <!-- Pie de página con redes sociales -->
+    <footer class="pie">
+        <p>&copy; 2026 Cristian Bernal. Página web adaptativa.</p>
+        <ul class="redes">
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Cristian Bernal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook de Cristian Bernal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z" fill="currentColor"/></svg>
+                    Facebook
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        // Carrusel de proyectos: mueve el carrusel un proyecto a la vez
+        const carrusel = document.getElementById('carrusel');
+        const anchoProyecto = () => carrusel.querySelector('.proyecto').offsetWidth + 16;
+
+        document.getElementById('anterior').addEventListener('click', () => {
+            carrusel.scrollBy({ left: -anchoProyecto(), behavior: 'smooth' });
+        });
+        document.getElementById('siguiente').addEventListener('click', () => {
+            carrusel.scrollBy({ left: anchoProyecto(), behavior: 'smooth' });
+        });
+
+        // Cierra el menú hamburguesa al tocar un enlace (solo en celular)
+        document.querySelectorAll('.menu a').forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
+</body>
+</html>
